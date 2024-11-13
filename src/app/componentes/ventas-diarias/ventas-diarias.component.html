@@ -1,0 +1,19 @@
+<div class="p-4 border-4 border-yellow-500 rounded">
+  <h1 class="text-center text-2xl pt-3 pb-10 text-yellow-500 font-bold">VENTAS DEL DÍA</h1>
+    <table class="w-full border-collapse border border-gray-300">
+      <thead>
+        <tr>
+          <th class="border border-gray-300 px-4 py-2">Nombre</th>
+          <th class="border border-gray-300 px-4 py-2">Total de Ventas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let nombre of ventasPorNombre | keyvalue">
+          <td>{{ nombre.key }}</td>
+          <td>{{ nombre.value | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+  <button class="bg-yellow-500 text-white px-4 py-2 rounded mt-4" (click)="dameVentas()">Ventas totales por día</button>
+</div>
+  
